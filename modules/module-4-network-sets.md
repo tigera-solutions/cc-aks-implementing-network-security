@@ -61,7 +61,7 @@ The NetworkSet can also be used to block access from a specific ip address or ci
    a. Test the access to the `facts` external service
 
    ```bash
-   curl -sI -m3 $(kubectl get svc -n catfacts facts -ojsonpath='{.status.loadBalancer.ingress[0].hostname}') | grep -i http
+   curl -sI -m3 $(kubectl get svc -n catfacts facts -ojsonpath='{.status.loadBalancer.ingress[0].ip}') | grep -i http
    ```
 
    b. Identify your workstation ip address and store it in a environment variable
@@ -138,7 +138,7 @@ The NetworkSet can also be used to block access from a specific ip address or ci
    a. Test the access to the `facts` service. It is blocked now. Wait a few minutes and check the `Activity > Alerts`.
 
    ```bash
-   curl -m3 $(kubectl get svc -n catfacts facts -ojsonpath='{.status.loadBalancer.ingress[0].hostname}')
+   curl -m3 $(kubectl get svc -n catfacts facts -ojsonpath='{.status.loadBalancer.ingress[0].ip}')
    ```
 
 ---
