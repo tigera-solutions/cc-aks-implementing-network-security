@@ -100,7 +100,7 @@ We recommend creating a global default deny policy after you complete reviewing 
    Policy recommendations are added to the `namespace-isolation` tier. Note the following:
 
    - Staged network policy recommendations work like any other staged network policy.
-   - You cannot move recommended staged policies in the `namespace-isolation` tier.
+   - You can move recommended staged policies in the `namespace-isolation` tier to any user-created tiers to customize it further if desired.
    - The name of the `namespace-isolation` tier is fixed and cannot be changed
 
    You are now ready to observe traffic flows in Policies board to verify that the policy is authorizing traffic as expected. When a policy works as expected, you can safely enforce it.
